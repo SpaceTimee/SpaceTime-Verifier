@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest",
+    "type-check": "tsc --noEmit",
+    "cf-typegen": "wrangler types",
+    "lint": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "packageManager": "pnpm@11.17.0",
+  "dependencies": {
+    "hono": "^4.12.32"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.18.8",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.1.2",
+    "@vitest/runner": "^4.1.10",
+    "@vitest/snapshot": "^4.1.10",
+    "eslint": "^10.8.0",
+    "globals": "^17.8.0",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.65.0",
+    "vitest": "^4.1.10",
+    "wrangler": "^4.114.0"
+  },
+  "type": "module"
+}

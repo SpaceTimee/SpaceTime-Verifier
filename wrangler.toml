@@ -1,0 +1,27 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "spacetime-verifier"
+main = "src/index.ts"
+compatibility_date = "2026-07-24"
+workers_dev = false
+
+routes = [
+  { pattern = "verifier.spacetimee.xyz", custom_domain = true }
+]
+
+[vars]
+LINK_URL = "https://link.spacetimee.xyz"
+
+[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+head_sampling_rate = 1
+persist = true
+
+[secrets]
+required = ["DUB_KEY"]
